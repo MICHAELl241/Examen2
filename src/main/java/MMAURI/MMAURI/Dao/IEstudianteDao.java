@@ -1,0 +1,14 @@
+package MMAURI.MMAURI.Dao;
+
+import MMAURI.MMAURI.Entity.Estudiante;
+import MMAURI.MMAURI.Entity.Persona;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+public interface IEstudianteDao  extends JpaRepository<Persona,Long> {
+    @Query("SELECT p FROM Estudiante p WHERE p.codigo= ?1")
+    Estudiante buscarEstudiante(String codigo);
+
+}
