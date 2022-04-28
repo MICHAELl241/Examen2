@@ -22,22 +22,22 @@ public class Buscar {
     private IEstudianteService estudianteService;
     private IDireccionService direccionService;
 
-    @GetMapping("/listaPersona")
+    @GetMapping("/listaPersonas")
 
     public List<Persona> listaPersona(){
         return this.personaService.listaPersonas();
 
     }
-    @GetMapping("/buscarEstudiante")
+    @GetMapping("/buscarEstudiantes")
 
     public Estudiante buscarEstudiante(@RequestParam("codigo") String codigo){
         return (Estudiante) this.estudianteService.obtenerEstudianteByCodigo(codigo);
 
     }
-    @GetMapping("/buscarDireccion")
+    //@GetMapping("/buscarDireccion")
 
-    public Direccion buscarDireccion(@RequestParam("codigo") String codigo){
-        return (Direccion) this.direccionService.obtenerDireccionByCodigo(codigo);
+    //public Direccion buscarDireccion(@RequestParam("codigo") String codigo){
+        //return (Direccion) this.direccionService.obtenerDireccionByCodigo(codigo);
 
-    }
+    //}
 }

@@ -6,7 +6,7 @@ import MMAURI.MMAURI.Entity.Estudiante;
 import java.util.List;
 
 public interface IDireccionService {
-    // obtener direccion  por su codigo
-    Direccion obtenerDireccionByCodigo(String codigo);
+    // obtener direccion  por su nombre
+   Estudiante obtenerDireccionByNombre(String nombre);
 
 }

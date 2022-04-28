@@ -28,13 +28,7 @@ public class Direccion extends Persona {
 
     }
 
-    public Direccion(String calle, String ciudad, String estado, String codPostal, String pais) {
-        this.calle = calle;
-        this.ciudad = ciudad;
-        this.estado = estado;
-        this.codPostal = codPostal;
-        this.pais = pais;
-    }
+
 
     public String getCalle() {
         return calle;
@@ -76,4 +70,14 @@ public class Direccion extends Persona {
         this.pais = pais;
     }
 
+    @Override
+    public String toString() {
+        return "Direccion{" +
+                "calle='" + calle + '\'' +
+                ", ciudad='" + ciudad + '\'' +
+                ", estado='" + estado + '\'' +
+                ", codPostal='" + codPostal + '\'' +
+                ", pais='" + pais + '\'' +
+                '}';
+    }
 }
