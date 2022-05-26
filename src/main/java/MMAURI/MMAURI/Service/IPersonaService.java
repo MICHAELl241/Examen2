@@ -11,5 +11,7 @@ public interface IPersonaService {
     List<Persona> listaPersonas();
 
 
+    //Buscar persona por su dni
+    Persona obtenerPersonaByDni(String idpersona);
 
 }

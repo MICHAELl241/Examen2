@@ -7,8 +7,8 @@ import MMAURI.MMAURI.Entity.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-public interface IDireccionDao extends JpaRepository<Persona,Long> {
+public interface IDireccionDao extends JpaRepository<Direccion,Long> {
 
-    @Query("SELECT p FROM Estudiante p WHERE p.codigo= ?1")
-    Estudiante buscarDireccion(String nombre);
+    @Query("SELECT p FROM Direccion p WHERE p.idpersona= ?1")
+    Direccion buscarDireccion(String idpersona);
 }

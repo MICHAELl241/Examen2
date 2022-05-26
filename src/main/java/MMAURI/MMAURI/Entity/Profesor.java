@@ -12,11 +12,15 @@ public class Profesor extends Persona  {
     @Column(name = "salario",length = 12,nullable = false)
     private  String salario;
 
+    @Column(name = "cod_docente", length = 12)
+    private String codDocente;
+
+
     public Profesor() {
     }
 
-    public Profesor(String salario) {
-        this.salario = salario;
+    public Profesor(String codDocente) {
+        this.codDocente = codDocente;
     }
 
     public String getSalario() {
@@ -27,10 +31,11 @@ public class Profesor extends Persona  {
         this.salario = salario;
     }
 
-    @Override
-    public String toString() {
-        return "Profesor{" +
-                "salario='" + salario + '\'' +
-                '}';
+    public String getCodDocente() {
+        return codDocente;
+    }
+
+    public void setCodDocente(String codDocente) {
+        this.codDocente = codDocente;
     }
 }

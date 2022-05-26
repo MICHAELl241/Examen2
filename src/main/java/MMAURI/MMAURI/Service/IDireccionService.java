@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface IDireccionService {
     // obtener direccion  por su nombre
-   Estudiante obtenerDireccionByNombre(String nombre);
+   Direccion obtenerDireccionByNombre(String idpersona);
 
 }

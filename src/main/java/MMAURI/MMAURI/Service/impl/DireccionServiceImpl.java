@@ -12,7 +12,7 @@ public class DireccionServiceImpl implements IDireccionService {
     private IDireccionDao DireccionDao;
 
     @Override
-    public Estudiante obtenerDireccionByNombre(String nombre) {return this.DireccionDao.buscarDireccion(nombre);}
+    public Direccion obtenerDireccionByNombre(String idpersona) {return this.DireccionDao.buscarDireccion(idpersona);}
 
 }
 

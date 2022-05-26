@@ -6,10 +6,7 @@ import MMAURI.MMAURI.Service.IDireccionService;
 import MMAURI.MMAURI.Service.IEstudianteService;
 import MMAURI.MMAURI.Service.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -34,10 +31,15 @@ public class Buscar {
         return (Estudiante) this.estudianteService.obtenerEstudianteByCodigo(codigo);
 
     }
-    //@GetMapping("/buscarDireccion")
+    @GetMapping ("/buscarProfesor")
+    public Persona buscarPersona(@RequestParam("idpersona") String idpersona){
+        return this.personaService.obtenerPersonaByDni(idpersona);
+    }
 
-    //public Direccion buscarDireccion(@RequestParam("codigo") String codigo){
-        //return (Direccion) this.direccionService.obtenerDireccionByCodigo(codigo);
+    @GetMapping("/buscarDireccion")
 
-    //}
+    public Direccion buscarDireccion(@RequestParam("idpersona") String idpersona){
+        return (Direccion) this.direccionService.obtenerDireccionByNombre(idpersona);
+
+    }
 }

@@ -6,5 +6,8 @@ import org.springframework.data.repository.query.Param;
 
 public interface IPersonaDao   extends JpaRepository<Persona,Long>{
 
+    @Query("SELECT p FROM Persona p WHERE p.idpersona = ?1")
+    Persona buscarPersona(String idpersona);
+
 
 }
