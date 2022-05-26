@@ -31,7 +31,7 @@ public class Buscar {
         return (Estudiante) this.estudianteService.obtenerEstudianteByCodigo(codigo);
 
     }
-    @GetMapping ("/buscarProfesor")
+    @GetMapping ("/listcursosprofesor")
     public Persona buscarPersona(@RequestParam("idpersona") String idpersona){
         return this.personaService.obtenerPersonaByDni(idpersona);
     }
@@ -41,5 +41,9 @@ public class Buscar {
     public Direccion buscarDireccion(@RequestParam("idpersona") String idpersona){
         return (Direccion) this.direccionService.obtenerDireccionByNombre(idpersona);
 
+    }
+    @GetMapping("/buscarEstudiantenom")
+    public Estudiante buscarEstudiantenom(@RequestParam("nombre") String nombre) {
+        return this.estudianteService.obtenerEstudianteByNombre(nombre);
     }
 }

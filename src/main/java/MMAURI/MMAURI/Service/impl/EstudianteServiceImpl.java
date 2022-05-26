@@ -17,4 +17,8 @@ public class EstudianteServiceImpl implements IEstudianteService {
 
     @Override
     public Estudiante obtenerEstudianteByCodigo(String codigo) {return this.estudianteDao.buscarEstudiante(codigo);}
+    @Override
+    public Estudiante obtenerEstudianteByNombre(String nombre) {
+        return this.estudianteDao.buscarEstudiante(nombre);
+    }
 }

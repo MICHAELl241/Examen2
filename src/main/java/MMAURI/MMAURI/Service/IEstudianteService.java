@@ -14,6 +14,6 @@ public interface IEstudianteService {
     // buscar estudiante por su codigo
     Estudiante obtenerEstudianteByCodigo(String codigo);
 
-
+    Estudiante obtenerEstudianteByNombre(String nombre);
 }
 

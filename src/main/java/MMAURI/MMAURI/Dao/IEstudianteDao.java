@@ -8,10 +8,9 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 public interface IEstudianteDao  extends JpaRepository<Estudiante,Long> {
-    @Query("SELECT p FROM Estudiante p WHERE p.codigo= ?1")
-    Estudiante buscarEstudiante(String codigo);
 
-    Estudiante findByCodigo(String codigo);
+    @Query("SELECT p FROM Estudiante p WHERE p.nombre = ?1")
+    Estudiante buscarEstudiante(String nombre);
 
 
 
